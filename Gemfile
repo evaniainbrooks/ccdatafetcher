@@ -14,6 +14,7 @@ gem 'pg', '~> 0.18'
 gem 'json-schema'
 gem 'require_all'
 gem 'rest-client'
+gem 'rack'
 
 group :development, :test do
   gem 'rspec'

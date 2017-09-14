@@ -46,6 +46,7 @@ GEM
     netrc (0.11.0)
     pg (0.21.0)
     public_suffix (3.0.0)
+    rack (2.0.3)
     require_all (1.4.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
@@ -88,6 +89,7 @@ DEPENDENCIES
   factory_girl
   json-schema
   pg (~> 0.18)
+  rack
   require_all
   rest-client
   rspec

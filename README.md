@@ -2,6 +2,14 @@ ccdatafetcher
 ============================================
 Cryptocurrency API Data Fetcher
 
+API Server
+-------
+### Run
+
+```sh
+bundle exec rackup
+```
+
 Worker
 -------
 ### Run
