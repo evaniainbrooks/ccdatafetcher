@@ -1,0 +1,24 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: cctool_production
+  pool: 5
+  username: cctool
+  password:  
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: cctool_development
+  pool: 5
+  username: cctool
+  password: qwe123
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: cctool_test
+  pool: 5
+  username: cctool
+  password: qwe123
