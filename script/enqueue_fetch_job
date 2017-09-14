@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative '../src/boot'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: enqueue_fetch_job [options]"
+
+  opts.on('-l', '--limit LIMIT', 'Ticker limit') { |v| options[:limit] = v }
+  opts.on('-c', '--currency CURRENCY', 'Desired currency') { |v| options[:currency] = v }
+end.parse!
+
+CoinmarketcapTickerFetcherJob.perform_later(options.slice(:limit, :currency))

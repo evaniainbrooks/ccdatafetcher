@@ -1,11 +1,8 @@
-#!/usr/bin/env ruby
 require 'active_record'
 require 'active_job'
 require 'delayed_job_active_record'
-require 'delayed/command'
 require 'yaml'
 require 'require_all'
-require 'pp'
 require_all 'src/models'
 require_all 'src/jobs'
 
@@ -17,6 +14,3 @@ ActiveRecord::Base.configurations = db_config.stringify_keys
 ActiveRecord::Base.establish_connection(environment.to_sym)
 
 ActiveJob::Base.queue_adapter = :delayed_job
-#Delayed::Backend::ActiveRecord::Job.establish_connection(db_config)
-Delayed::Command.new(ARGV).daemonize
-

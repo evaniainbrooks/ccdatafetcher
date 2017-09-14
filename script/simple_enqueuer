@@ -1,0 +1,10 @@
+#!/bin/sh
+while true
+do
+  echo 'Calling enqueue_fetch_job'
+  $(dirname $0)/enqueue_fetch_job -l 50 -c USD
+  echo 'Sleeping'
+  
+  # Sleep default to 6 minutes
+  sleep ${1-6m}
+done

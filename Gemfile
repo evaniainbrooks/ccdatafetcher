@@ -10,10 +10,10 @@ gem 'daemons'
 gem 'activerecord'
 gem 'activejob'
 gem 'delayed_job_active_record'
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 gem 'json-schema'
 gem 'require_all'
+gem 'rest-client'
 
 group :development, :test do
   gem 'rspec'
